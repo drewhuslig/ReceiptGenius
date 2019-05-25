@@ -1,0 +1,119 @@
+[
+  {
+    "id": 0,
+    "name": "Target",
+    "date": "05/14/2019",
+    "total": 5.64,
+    "category": "Supplies",
+    "description": "Cookie Cake Icing",
+    "file": {
+      "name": "Receipt_1_Target.pdf",
+      "type": "application/pdf",
+      "size": "38602"
+    }
+  },
+  {
+    "id": 1,
+    "name": "Harrod's",
+    "date": "05/02/2019",
+    "total": 424.02,
+    "category": "Personal",
+    "description": "Fresh Fish",
+    "file": {
+      "name": "Receipt_2_Harrod.jpg",
+      "type": "image/jpeg",
+      "size": "17869"
+    }
+  },
+  {
+    "id": 2,
+    "name": "Microcenter",
+    "date": "05/24/2019",
+    "total": 2347.42,
+    "category": "Supplies",
+    "description": "",
+    "file": {
+      "name": "Receipt_3_Microcenter.pdf",
+      "type": "application/pdf",
+      "size": "156413"
+    }
+  },
+  {
+    "id": 3,
+    "name": "Uniqlo",
+    "date": "05/07/2019",
+    "total": 1632.82,
+    "category": "Personal",
+    "description": "Shirt",
+    "file": {
+      "name": "Receipt_4_Uniqlo.png",
+      "type": "image/png",
+      "size": "903282"
+    }
+  },
+  {
+    "id": 4,
+    "name": "AliExpress",
+    "date": "05/09/2019",
+    "total": 2062.83,
+    "category": "Supplies",
+    "description": "Tubing",
+    "file": {
+      "name": "Receipt_5_AliExpress.jpg",
+      "type": "image/jpeg",
+      "size": "267501"
+    }
+  },
+  {
+    "id": 5,
+    "name": "Bosch",
+    "date": "05/14/2019",
+    "total": 223.07,
+    "category": "",
+    "description": "",
+    "file": {
+      "name": "Receipt_6_Bosch.png",
+      "type": "image/png",
+      "size": "6744687"
+    }
+  },
+  {
+    "id": 6,
+    "name": "Hyvee",
+    "date": "05/14/2019",
+    "total": 87.25,
+    "category": "Supplies",
+    "description": "Cookie Cakes",
+    "file": {
+      "name": "Receipt_7_Hyvee.jpg",
+      "type": "image/jpeg",
+      "size": "78205"
+    }
+  },
+  {
+    "id": 7,
+    "name": "Dropbox",
+    "date": "05/01/2019",
+    "total": 11.06,
+    "category": "Subscriptions",
+    "description": "",
+    "file": {
+      "name": "Receipt_8_Dropbox.pdf",
+      "type": "application/pdf",
+      "size": "274261"
+    }
+  },
+  {
+    "id": 8,
+    "name": "Yves Saint Laurent",
+    "date": "05/04/2019",
+    "total": 5799.76,
+    "category": "Personal",
+    "description": "Jacket",
+    "file": {
+      "name": "Receipt_9_Yves_Saint_Laurent.jpg",
+      "type": "image/jpeg",
+      "size": "48492"
+    }
+  }
+]
