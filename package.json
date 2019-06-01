@@ -16,7 +16,7 @@
     "react-scripts": "3.0.1"
   },
   "scripts": {
-    "start": "concurrently \"node server.js\" \"react-scripts start\"",
+    "start": "concurrently \"node server.js\" \"npm run build\"",
     "dev": "concurrently \"nodemon server.js\" \"react-scripts start\"",
     "build": "react-scripts build",
     "test": "react-scripts test",
