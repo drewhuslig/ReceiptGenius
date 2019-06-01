@@ -9,6 +9,7 @@
     "express": "^4.17.1",
     "express-fileupload": "^1.1.4",
     "fs": "0.0.1-security",
+    "path": "^0.12.7",
     "pg": "^7.11.0",
     "react": "^16.8.6",
     "react-datepicker": "^2.6.0",
@@ -16,13 +17,14 @@
     "react-scripts": "3.0.1"
   },
   "scripts": {
-    "start": "concurrently \"node server.js\" \"npm run build\"",
+    "start": "node server.js",
     "dev": "concurrently \"nodemon server.js\" \"react-scripts start\"",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "heroku-postbuild": "npm run build"
   },
-  "proxy": "http://localhost:5000",
+  "proxy": "http://localhost:3005",
   "eslintConfig": {
     "extends": "react-app"
   },
