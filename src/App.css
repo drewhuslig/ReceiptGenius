@@ -17,19 +17,30 @@
   margin: 15px 30px;
 }
 
-.add-receipt-btn {
+.float-right {
+  float: right;
+}
+
+.float-left {
   float: left;
+}
+
+.btn {
   margin: 10px;
   border-radius: 5px;
   border-color: black;
-  border-width: 2px;
+  border-width: 1px;
   background-color: white;
   padding: 6px 8px;
   font-size: 1em;
   box-shadow: none;
 }
 
-.add-receipt-btn:hover, .add-receipt-btn:focus {
+.add-receipt-btn {
+  border-width: 2px;
+}
+
+.btn:hover, .btn:focus {
   cursor: pointer;
 }
 
@@ -47,12 +58,16 @@
 }
 
 .modal-header {
-  background-color: #eaeaea;
+  background-color: #cacaca;
   padding: 10px;
 }
 
 .modal-title {
   float: left;
+}
+
+.fileSelect {
+  z-index: 2;
 }
 
 .closeBtn {
@@ -67,10 +82,33 @@
 }
 
 .modal-content {
-  background-color: #f4f4f4;
+  background-color: white;
   margin: 10% auto;
-  width: 30%;
+  display: inline-block;
   text-align: left;
+}
+
+.modal-form {
+  padding: 10px;
+}
+
+.radio-button {
+  display: none;
+}
+
+.radio-label {
+  cursor: pointer;
+  border-color: black;
+  border-width: 1px;
+  border-radius: 5px;
+  border-style: solid;
+  padding: 5px;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+input:checked + label {
+  background: #c5c5c5;
 }
 
 .report-total {
