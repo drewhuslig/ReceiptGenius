@@ -118,7 +118,7 @@ input:checked + label {
 
 .container {
   display: grid;
-  grid-template-columns: auto auto auto auto auto;
+  grid-template-columns: 20% 20% 20% 20% 20%;
 }
 
 .receipt-container {
@@ -227,7 +227,7 @@ input:checked + label {
 
       .container {
         display: grid;
-        grid-template-columns: auto auto auto;
+        grid-template-columns: 50% 50%;
       }
 
     }
@@ -239,7 +239,7 @@ input:checked + label {
 
       .container {
         display: grid;
-        grid-template-columns: auto auto auto auto;
+        grid-template-columns: 25% 25% 25% 25%;
       }  
 
     }

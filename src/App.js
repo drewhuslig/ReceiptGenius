@@ -191,7 +191,7 @@ export default class App extends React.Component {
 
           <hr></hr>
 
-          <div className='container clearfix'>
+          <div className='container'>
             {this.state.data.map(receipt => {
                 return (
                   <div className='grid-item receipt' key={receipt.id}>
@@ -215,6 +215,7 @@ export default class App extends React.Component {
                 )
               })
             }
+            
           </div>
         </div>
       </div>
