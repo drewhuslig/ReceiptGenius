@@ -105,6 +105,9 @@
   padding: 5px;
   display: inline-block;
   margin-right: 10px;
+  -webkit-user-select: none; /* Chrome/Safari */        
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+ */
 }
 
 input:checked + label {
@@ -114,6 +117,7 @@ input:checked + label {
 .report-total {
   float: right;
   margin: 10px;
+  padding: 6px 8px;
 }
 
 .container {
@@ -216,6 +220,12 @@ input:checked + label {
   display: none;
 }
 
+.message {
+  width: 100%;
+  text-align: center;
+  color: red;
+}
+
 *:focus {
   outline: 0 !important;
 }
@@ -227,7 +237,7 @@ input:checked + label {
 
       .container {
         display: grid;
-        grid-template-columns: 50% 50%;
+        grid-template-columns: 100%;
       }
 
     }
@@ -239,7 +249,7 @@ input:checked + label {
 
       .container {
         display: grid;
-        grid-template-columns: 25% 25% 25% 25%;
+        grid-template-columns: 33% 33% 33%;
       }  
 
     }
