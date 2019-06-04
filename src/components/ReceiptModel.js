@@ -27,11 +27,11 @@ export default class ReceiptModel extends React.Component {
                         <i className={this.getFileType(this.props.receipt.type)}></i>
                     </div>
                     <div className='grid-item details'>
-                        <div className='name-detail'>{this.props.receipt.name}</div>
-                        <div className='date-detail'>{this.props.receipt.date}</div>
-                        <div className='total-detail'>${this.props.receipt.total}</div>
-                        <div className='category-detail'>{this.props.receipt.category}</div>
-                        <div className='description-detail'>{this.props.receipt.description}</div>
+                        <div className='name detail'>{this.props.receipt.name}</div>
+                        <div className='date detail'>{this.props.receipt.date}</div>
+                        <div className='total detail'>${this.props.receipt.total}</div>
+                        <div className='category detail'>{this.props.receipt.category}</div>
+                        <div className='description detail'>{this.props.receipt.description}</div>
                     </div>
                 </div>
             </div>

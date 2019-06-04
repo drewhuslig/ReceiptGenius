@@ -67,6 +67,7 @@ export default class Modal extends React.Component {
 
   //Toggles radio button off if already clicked
   handleLabelClick = (e, button) => {
+    console.log(button.checked);
     if(button.checked){
       e.preventDefault();
       button.checked = false;
@@ -133,13 +134,13 @@ export default class Modal extends React.Component {
                   <div className='radio-group'>Category<br/>
                     <input type="radio" className="radio-button" name="category" value='Supplies' id='button1' ref='button1'
                       onChange={this.handleChangeOption}/>
-                    <label htmlFor="button1" className='radio-label' onClick={e => this.handleLabelClick(e, this.refs.button1)}>Supplies</label>
+                    <label htmlFor="button1" className='radio-label label1' onClick={e => this.handleLabelClick(e, this.refs.button1)}>Supplies</label>
                     <input type="radio" className="radio-button" name="category" value='Subscriptions' id='button2' ref='button2'
                       onChange={this.handleChangeOption}/>
-                    <label htmlFor="button2" className='radio-label' onClick={e => this.handleLabelClick(e, this.refs.button2)}>Subscriptions</label>
+                    <label htmlFor="button2" className='radio-label label2' onClick={e => this.handleLabelClick(e, this.refs.button2)}>Subscriptions</label>
                     <input type="radio" className="radio-button" name="category" value='Personal' id='button3' ref='button3'
                       onChange={this.handleChangeOption}/>
-                    <label htmlFor="button3" className='radio-label' onClick={e => this.handleLabelClick(e, this.refs.button3)}>Personal</label>
+                    <label htmlFor="button3" className='radio-label label3' onClick={e => this.handleLabelClick(e, this.refs.button3)}>Personal</label>
                   </div>
                   <br/>
                   <div>

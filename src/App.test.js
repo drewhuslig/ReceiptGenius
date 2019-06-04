@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { create } from 'react-test-renderer'
+import { create, fireEvent, render } from 'react-test-renderer'
 import App from './App';
 import Modal from './components/Modal';
 import ReceiptModel from './components/ReceiptModel';
@@ -38,25 +38,26 @@ describe('ReceiptModel component', () => {
     };
     const component = create(<ReceiptModel receipt={receipt}/>)
     const root = component.root;
-    const nameDiv = root.find(e => e.props.className ==='name-detail');
+    const nameDiv = root.find(e => e.props.className ==='name detail');
     expect(nameDiv.props.children).toBe('test name');
-    const dateDiv = root.find(e => e.props.className ==='date-detail');
+    const dateDiv = root.find(e => e.props.className ==='date detail');
     expect(dateDiv.props.children).toBe('01/01/2019');
-    const totalDiv = root.find(e => e.props.className === 'total-detail');
+    const totalDiv = root.find(e => e.props.className === 'total detail');
     expect(totalDiv.props.children).toStrictEqual(['$', 2000]);
-    const categoryDiv = root.find(e => e.props.className ==='category-detail');
+    const categoryDiv = root.find(e => e.props.className ==='category detail');
     expect(categoryDiv.props.children).toBe('Supplies');
-    const descriptionDiv = root.find(e => e.props.className ==='description-detail');
+    const descriptionDiv = root.find(e => e.props.className ==='description detail');
     expect(descriptionDiv.props.children).toBe('test description');
   })
 })
 
+//This on wasn't quite working for me
 describe('Modal Component', () => {
-  if('click labels and switch radio buttons', async () => {
+  it('click labels and switch radio buttons', async () => {
     const component = create(<Modal />);
     const root = component.root;
+    const instance = component.getInstance();
+    console.log(instance.state);
     
-
-
-  });
-});
+  })
+})
