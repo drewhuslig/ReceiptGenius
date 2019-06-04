@@ -9,7 +9,6 @@ export default class ReportTotal extends React.Component {
         }
     }
 
-    //This.state.total used for unit testing
     render(){
         return (
             <div className='report-total'>

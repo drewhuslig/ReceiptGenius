@@ -12,13 +12,16 @@ export default class Modal extends React.Component {
     
   }
   
+  //Calls close modal function and resets message for form
   onCloseModal = (e) => {
     this.setState({message: ""});
     this.refs.form.reset();
     this.props.closeModal(e);
   }
 
+  //Sends call to add receipt to DB
   onAddReceipt = (e) => {
+    //Rudimentary form validation if required fields aren't present
     if (this.refs.total.state.numAsString === "" || this.refs.fileSelect.files.length === 0 || this.refs.name.length < 1){
       e.preventDefault();
       this.setState({message: 'Please fill all required feilds!'})

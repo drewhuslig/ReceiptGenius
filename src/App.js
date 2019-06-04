@@ -17,11 +17,10 @@ export default class App extends React.Component {
     }
   }
 
-
+  //Retrieves data for receipts before component mounts
   componentWillMount = () => {
-    Axios.get('/receipts')
+    return Axios.get('/receipts')
       .then(res => {
-        console.log(res.data);
         this.calculateTotal(res.data)
         this.setState({
           data: res.data
@@ -29,6 +28,7 @@ export default class App extends React.Component {
       })
   }
 
+  //Calculates total of all receipts
   calculateTotal = (data) => {
     let t = 0;
     data.forEach(element => {
@@ -37,19 +37,14 @@ export default class App extends React.Component {
     this.setState({total: parseFloat(t).toFixed(2)})
   }
 
+  //Handles date for date picker
   handleChangeDate = date => {
     this.setState({
       startDate: date
     })
   }
 
-  getFileType(type) {
-    if (type === 'application/pdf') {
-      return 'far fa-file-pdf file-image'
-    }
-    return 'far fa-file-image file-image'
-  }
-
+  //Removes receipt from DB and updates state
   removeItem = (id, e) => {
     e.preventDefault();
     console.log(id);
@@ -59,14 +54,14 @@ export default class App extends React.Component {
       })
   }
 
+  //Displays modal component
   openModal = e => {
     e.preventDefault();
     const modal = this.refs.modal;
     modal.style.display = 'block';
   }
 
-  
-
+  //Functions to handle form data in modal
   handleChangeOption = e => {
     this.setState({
       selectedOption: e.target.value
@@ -89,6 +84,7 @@ export default class App extends React.Component {
     this.setState({name: e.target.value})
   }
   
+  //Adds receipt to DB and updates State
   addReceipt = e => {
     this.closeModal(e);
     let formData = new FormData()
@@ -107,6 +103,7 @@ export default class App extends React.Component {
     })
   }
 
+  //Toggles radio button off if already clicked
   handleLabelClick = (e, button) => {
     if(button.checked){
       e.preventDefault();
@@ -115,6 +112,7 @@ export default class App extends React.Component {
     }
   }
 
+  //Used for number formater
   handleTotal = (e) => {
     this.setState({
       total: e.target.value
@@ -123,6 +121,7 @@ export default class App extends React.Component {
     })
   }
 
+  //Closes model when clicked outside of form area
   outsideClick = (e) => {
     const modal = this.refs.modal;
     
@@ -133,6 +132,7 @@ export default class App extends React.Component {
     }
   }
 
+  //Hides model
   closeModal = (e) => {
     e.preventDefault();
     const modal = this.refs.modal;
@@ -157,8 +157,7 @@ export default class App extends React.Component {
           <div className='container'>
             {this.state.data.map(receipt => {
                 return (
-                  <ReceiptModel 
-                    getFileType = {this.getFileType}
+                  <ReceiptModel
                     removeItem = {this.removeItem}
                     receipt = {receipt}
                   />
